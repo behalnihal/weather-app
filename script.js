@@ -89,3 +89,12 @@ function showImage() {
   const weatherIcon = document.getElementById("weather-icon");
   weatherIcon.style.display = "block"; // Make the image visible once it's loaded
 }
+
+const input = document.getElementById("city");
+
+input.addEventListener("keypress", function (event) {
+  if (event.key == "Enter") {
+    event.preventDefault();
+    document.getElementById("Search").click();
+  }
+});
